@@ -6,7 +6,8 @@ int main(int argc, char *argv[])
     ClassA A;
     ClassB B;
 
-    A.SaySth (B, "yoyoyo");
+    A.SetVClass (&B);
+    A.SaySth ("yoyoyo");
 
     return 0;
 }

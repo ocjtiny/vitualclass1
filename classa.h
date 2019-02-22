@@ -8,10 +8,18 @@ class ClassA
 public:
     ClassA();
 
-    void SaySth(vitualclass &a, std::string words)
+    void SetVClass(vitualclass* vc)
     {
-        a.sayhello (words);
+       a = vc;
     }
+    void SaySth(std::string words)
+    {
+        if(a != nullptr) {
+            a->sayhello (words);
+        }
+    }
+
+    vitualclass *a=nullptr;
 };
 
 #endif // CLASSA_H
